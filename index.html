@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ops Assistant (Local-Only, Free)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="top">
+    <h1>Ops Assistant</h1>
+    <div class="prefs">
+      <label>Tone
+        <select id="tone">
+          <option value="concise">Concise</option>
+          <option value="formal">Formal</option>
+          <option value="friendly" selected>Friendly</option>
+          <option value="stepbystep">Step-by-step</option>
+        </select>
+      </label>
+      <label>Default Language
+        <select id="lang">
+          <option value="en" selected>English</option>
+          <option value="fr">Français</option>
+          <option value="ar">العربية</option>
+        </select>
+      </label>
+    </div>
+  </header>
+
+  <main>
+    <section class="ingest">
+      <h2>Upload your manual</h2>
+      <p>Drop a DOCX/PDF here. Indexing runs in your browser—no server.</p>
+      <input id="file" type="file" accept=".doc,.docx,.pdf" />
+      <button id="indexBtn">Index Manual</button>
+      <div id="indexStatus" class="status"></div>
+    </section>
+
+    <section class="chat">
+      <h2>Ask a question</h2>
+      <div class="chatbox" id="chat"></div>
+
+      <div class="inputrow">
+        <textarea id="q" rows="2" placeholder="Ask about a procedure, e.g. 'How do we update the weekly berth plan?'"></textarea>
+        <button id="askBtn">Ask</button>
+        <button id="micBtn" title="Hold to speak">🎤</button>
+      </div>
+
+      <div class="hint">
+        Answers will include citations like “Sec 2.3.1 – Sub-procedure”.
+      </div>
+    </section>
+
+    <section class="debug">
+      <details>
+        <summary>Developer / Debug</summary>
+        <pre id="debug"></pre>
+      </details>
+    </section>
+  </main>
+
+  <footer>
+    <small>All processing is local in your browser. No data leaves your device.</small>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
