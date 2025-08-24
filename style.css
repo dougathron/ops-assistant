@@ -1,0 +1,18 @@
+* { box-sizing: border-box; }
+body { font-family: system-ui, Segoe UI, Arial, sans-serif; margin: 0; color: #111; background: #fafafa; }
+.top { display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; background: white; border-bottom: 1px solid #e5e5e5; position: sticky; top: 0; }
+h1 { font-size: 18px; margin: 0; }
+.prefs label { margin-left: 12px; font-size: 12px; }
+main { max-width: 980px; margin: 0 auto; padding: 16px; }
+section { background: white; border: 1px solid #eee; border-radius: 12px; padding: 16px; margin: 12px 0; }
+.chatbox { min-height: 180px; padding: 8px; border: 1px solid #eee; border-radius: 10px; background: #fcfcfc; overflow: auto; }
+.inputrow { display: grid; grid-template-columns: 1fr auto auto; gap: 8px; margin-top: 8px; }
+textarea { width: 100%; padding: 8px; border-radius: 8px; border: 1px solid #ddd; }
+button { padding: 8px 12px; border: 1px solid #ddd; border-radius: 10px; background: #f4f4f4; cursor: pointer; }
+button:hover { background: #eee; }
+.status { font-size: 12px; color: #555; margin-top: 8px; white-space: pre-wrap; }
+.hint { font-size: 12px; color: #666; margin-top: 6px; }
+footer { text-align: center; padding: 24px; color: #888; }
+.msg { padding: 8px 10px; border-radius: 10px; margin: 6px 0; max-width: 85%; }
+.msg.user { background: #e7f1ff; margin-left: auto; }
+.msg.bot { background: #f0f0f0; }
